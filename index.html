@@ -3,124 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio website</title>
+  <title>Cybersecurity Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS CSS (Animation on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
       scroll-behavior: smooth;
     }
-    header {
-      background-color: #333;
+    .hero {
+      background: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?fit=crop&w=1500&q=80') center/cover no-repeat;
       color: white;
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
+      text-shadow: 1px 1px 5px #000;
+      padding: 140px 0;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    .section-title {
+      margin-top: 60px;
+      margin-bottom: 30px;
     }
-    section {
-      padding: 50px;
-      text-align: center;
+    .card-icon {
+      font-size: 40px;
+      color: #0d6efd;
+      transition: transform 0.3s;
     }
-    #about img {
-      width: 150px;
-      border-radius: 50%;
+    .card-icon:hover {
+      transform: scale(1.2);
     }
-    form input, form textarea {
-      width: 80%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #333;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #555;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: all 0.3s;
     }
     footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px;
+      background-color: #212529;
+      color: #fff;
+      padding: 20px 0;
+    }
+    footer a {
+      color: #0d6efd;
+    }
+    .typed-text {
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Cyber Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <section id="home">
-    <h2>Welcome to My Portfolio web</h2>
-    <p>I'm a web developer passionate about creating beautiful and functional websites.</p>
-  </section>
+<!-- Hero Section -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Hello, I'm a <span class="typed-text"></span></h1>
+    <p class="lead">Protecting systems, networks, and data with advanced security solutions.</p>
+    <a href="#contact" class="btn btn-primary btn-lg mt-3">Hire Me</a>
+  </div>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="https://via.placeholder.com/150" alt="Profile Photo" />
-    <p>Hi! I'm John Doe, a frontend developer based in YourCity. I love coding, designing, and bringing ideas to life on the web.</p>
-  </section>
+<!-- About Section -->
+<section id="about" class="container text-center" data-aos="fade-up">
+  <h2 class="section-title">About Me</h2>
+  <p class="lead">I am passionate about cybersecurity, with experience in penetration testing, network security, and incident response. My goal is to safeguard digital assets and help organizations stay secure in an ever-evolving threat landscape.</p>
+</section>
 
-  <section id="projects">
-    <h2>My Projects</h2>
-    <p>Here are some of my recent works:</p>
-    <ul style="list-style-type: none; padding: 0;">
-      <li>🌟 Project One - Personal Blog</li>
-      <li>🌟 Project Two - E-commerce Website</li>
-      <li>🌟 Project Three - Portfolio Website</li>
-    </ul>
-  </section>
+<!-- Skills Section -->
+<section id="skills" class="container">
+  <h2 class="section-title text-center" data-aos="fade-up">Skills</h2>
+  <div class="row text-center">
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+      <i class="bi bi-shield-lock-fill card-icon"></i>
+      <h5 class="mt-2">Penetration Testing</h5>
+      <p>Identify and exploit vulnerabilities to strengthen security posture.</p>
+    </div>
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+      <i class="bi bi-hdd-network-fill card-icon"></i>
+      <h5 class="mt-2">Network Security</h5>
+      <p>Design and maintain secure network infrastructures and architectures.</p>
+    </div>
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+      <i class="bi bi-graph-up-arrow card-icon"></i>
+      <h5 class="mt-2">Incident Response</h5>
+      <p>Manage and mitigate security breaches and cyber threats effectively.</p>
+    </div>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required /><br>
-      <input type="email" id="email" placeholder="Your Email" required /><br>
-      <textarea id="message" placeholder="Your Message" rows="5" required></textarea><br>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<!-- Projects Section -->
+<section id="projects" class="container">
+  <h2 class="section-title text-center" data-aos="fade-up">Projects</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="100">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1581090700227-4c4d50d7a2c3?fit=crop&w=500&q=80" class="card-img-top" alt="Project 1">
+        <div class="card-body">
+          <h5 class="card-title">Threat Analysis Tool</h5>
+          <p class="card-text">Developed a tool to analyze and detect advanced persistent threats in real-time environments.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="200">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749a6?fit=crop&w=500&q=80" class="card-img-top" alt="Project 2">
+        <div class="card-body">
+          <h5 class="card-title">Secure VPN Setup</h5>
+          <p class="card-text">Designed and deployed a secure VPN infrastructure for remote access protection.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="300">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?fit=crop&w=500&q=80" class="card-img-top" alt="Project 3">
+        <div class="card-body">
+          <h5 class="card-title">Incident Response Plan</h5>
+          <p class="card-text">Created comprehensive response plans for financial sector clients to minimize downtime and data loss.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-  </footer>
+<!-- Contact Section -->
+<section id="contact" class="container" data-aos="fade-up">
+  <h2 class="section-title text-center">Contact Me</h2>
+  <form class="row g-3">
+    <div class="col-md-6">
+      <input type="text" class="form-control" placeholder="Your Name" required>
+    </div>
+    <div class="col-md-6">
+      <input type="email" class="form-control" placeholder="Your Email" required>
+    </div>
+    <div class="col-12">
+      <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+    </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </div>
+  </form>
+</section>
 
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
+<!-- Footer -->
+<footer class="text-center mt-5">
+  <div class="container">
+    <p>&copy; 2025 My Cybersecurity Portfolio | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  </div>
+</footer>
 
-      if (name && email && message) {
-        alert("Thank you, " + name + "! Your message has been sent.");
-        // Reset form
-        this.reset();
-      } else {
-        alert("Please fill in all fields.");
-      }
-    });
-  </script>
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Typed JS -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  AOS.init();
+  var typed = new Typed(".typed-text", {
+    strings: ["Cybersecurity Specialist", "Ethical Hacker", "Security Analyst"],
+    typeSpeed: 60,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
 </body>
 </html>
